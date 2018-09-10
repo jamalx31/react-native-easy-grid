@@ -39,7 +39,7 @@ function computeProps(incomingProps, defaultProps) {
       }
     }
 
-    _.merge(computedProps.style, defaultProps.style, computedPropsStyle);
+    computedProps.style = [defaultProps.style, incomingPropsStyle];
   }
 
   // console.log("computedProps ", computedProps);
